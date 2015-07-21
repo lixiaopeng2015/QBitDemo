@@ -9,18 +9,13 @@ import java.util.List;
 /**
  * Created by lixiaopeng on 2015/7/15.
  */
-@RequestMapping("/test")
+@RequestMapping("/QBit")
 public class SiteService {
-
-    @RequestMapping("/hello")
-    public String hello(){
-        return "Hello World!";
-    }
 
     @RequestMapping("/sites")
     public List<Site> getSites(){
         SiteDao siteDao = new SiteDao();
-        List<Site> list = siteDao.getCrawlerSites();
+        List<Site> list = siteDao.getSites();
         return list;
     }
 

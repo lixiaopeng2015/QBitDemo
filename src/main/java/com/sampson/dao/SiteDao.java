@@ -15,7 +15,7 @@ import java.util.List;
 public class SiteDao {
     private static final Logger logger = LoggerFactory.getLogger(SiteDao.class);
 
-    public List<Site> getCrawlerSites(){
+    public List<Site> getSites(){
         SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
         if (sqlSession == null) {
             logger.error("obtain SqlSession failure...");
@@ -24,7 +24,7 @@ public class SiteDao {
             SiteMapper siteMapper = sqlSession.getMapper(SiteMapper.class);
             return siteMapper.getCrawlerSites();
         } catch (Exception e) {
-            logger.error("SiteDao class getCrawlerSites method exceptioin,get crawler site list failure...");
+            logger.error("SiteDao class getSites method exceptioin,get sites list failure...");
         }finally {
             sqlSession.close();
         }
