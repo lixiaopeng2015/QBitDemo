@@ -22,7 +22,7 @@ public class SiteDao {
         }
         try {
             SiteMapper siteMapper = sqlSession.getMapper(SiteMapper.class);
-            return siteMapper.getCrawlerSites();
+            return siteMapper.getSites();
         } catch (Exception e) {
             logger.error("SiteDao class getSites method exceptioin,get sites list failure...");
         }finally {
