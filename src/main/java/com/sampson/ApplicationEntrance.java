@@ -12,8 +12,8 @@ import java.util.Date;
 /**
  * Created by lixiaopeng on 2015/7/15.
  */
-public class CrawlerApplication {
-    private static final Logger logger = LoggerFactory.getLogger(CrawlerApplication.class);
+public class ApplicationEntrance {
+    private static final Logger logger = LoggerFactory.getLogger(ApplicationEntrance.class);
 
     public static void main(String... args) {
         try {
